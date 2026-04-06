@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>E-commerce website - HTML and CSS Only</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="#home">TechStore</a>
+            </div>              
+            <ul class="nav-links">
+                <li><a href="#home" >Home</a></li>
+                <li><a href="#you" >Account</a></li>
+                <li><a href="#wallet" >Wallet</a></li>
+                <li>
+                    <a href="#cart" class="cart-link">
+                        🛒 Cart
+                        <span class="cart-badge">3</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+            <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <span class="hero-tag">New Arrivals 2026</span>
+            <h1 class="hero-title">Premium Tech. <b>Unbeatable Prices.</b></h1>
+            <p class="hero-subtitle">Explore our curated collection of top-tier electronics
+            - built for performance, designed for you.</p>
+            <div class="hero-actions">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#" class="btn btn-ghost">View Deals</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-blob"></div>
+            <span class="hero-emoji">🎧</span>
+        </div>
+    </section>
+            <!-- PRODUCTS SECTION  -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Hand-picked gear for work, gaming, and everything in
+                between.
+            </p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="card-image">
+                    <span class="product-emoji">🎧</span>
+                    <span class="badge badge-hot">HOT</span>
+                </div>
+                <div class="card-body">
+                    <span class="product-category">Audio</span>
+                    <h3 class="product-name">Wireless Headphones</h3>
+                    <p class="product-desc">Premium grade wireless headphones
+                        with 24hrs battery backup and noise cancellation.</p>
+                    <div class="card-footer">
+                        <span class="product-price">₹2,999</span>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="card-image">
+                    <span class="product-emoji">🔌</span>
+                    <span class="badge badge-sale">Sale</span>
+                </div>
+                <div class="card-body">
+                    <span class="product-category">Mobile Accessories</span>
+                    <h3 class="product-name">Type-C USB cable</h3>
+                    <p class="product-desc">Strong braided cable for extra protection.
+                         Compatible with Poco M2, Poco M2 pro, Redmi note 10A.</p>
+                    <div class="card-footer">
+                        <span class="product-price">₹599</span>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>     
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="card-image">
+                    <span class="product-emoji">⌨</span>
+                    <span class="badge badge-new">New</span>
+                </div>
+                <div class="card-body">
+                    <span class="product-category">Accessory</span>
+                    <h3 class="product-name">Mechanical Keyboard</h3>
+                    <p class="product-desc">Wireless & wired.
+                     Bluetooth and 5GHz connectivity for lag-free typing.</p>
+                    <div class="card-footer">
+                        <span class="product-price">₹1799</span>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div> 
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image">
+                    <span class="product-emoji">🖱️</span>
+                </div>
+                <div class="card-body">
+                    <span class="product-category">Accessory</span>
+                    <h3 class="product-name">Mouse</h3>
+                    <p class="product-desc">High-precision
+                         gaming mouse with braided wire for extra durability and
+                          protection.</p>
+                    <div class="card-footer">
+                        <span class="product-price">₹799</span>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div> 
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="card-image">
+                    <span class="product-emoji">💻</span>
+                    <span class="badge badge-hot">HOT</span>
+                </div>
+                <div class="card-body">
+                    <span class="product-category">Laptop</span>
+                    <h3 class="product-name">Apple Mac-book</h3>
+                    <p class="product-desc">Premium build quality with Apple
+                         Silicon. Designed for creatives and professionals.</p>
+                    <div class="card-footer">
+                        <span class="product-price">₹1,30,000</span>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div> 
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="card-image">
+                    <span class="product-emoji">🔋</span>
+                </div>
+                <div class="card-body">
+                    <span class="product-category">Accessory</span>
+                    <h3 class="product-name">Power-Bank</h3>
+                    <p class="product-desc">10,000 mAh compact power bank with
+                         dual USB output and fast charging support.</p>
+                    <div class="card-footer">
+                        <span class="product-price">₹10799</span>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div> 
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">⚡ TechStore</span>
+                <p>Your one-stop shop for premium tech.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 TechStore. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
