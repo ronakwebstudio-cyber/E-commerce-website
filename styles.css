@@ -1,36 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --bg: rgb(250, 219, 224);
-    --text-white: #ffffff;
-    --nav-bg: #f99696;
-    --accent: #f36262;
-    --accent-contrast: #fff2ff;
-    --accent-border-rgba: rgba(171, 5, 27, 0.4);
+    /* === BRAND COLORS === */
+    --clr-primary:       #e8445a;
+    --clr-primary-dark:  #c73348;
+    --clr-primary-light: #fde8eb;
+
+    /* === BACKGROUNDS === */
+    --clr-bg:       #fdf4f5;
+    --clr-bg-card:  #fce8e8;
+    --clr-bg-nav:   #f99696;
+    --clr-bg-hero:  #fb5d78;
+    --clr-bg-footer:#ffabab;
+
+    /* === TEXT === */
+    --clr-text:         #1a1a1a;
+    --clr-text-white:   #ffffff;
+    --clr-text-muted:   #868484;
+    --clr-text-heading: #5d5b5b;
+
+    /* === BADGES === */
+    --clr-badge-hot:  #ff4757;
+    --clr-badge-new:  #2ed573;
+    --clr-badge-sale: #ffa502;
+
+    /* === SHADOWS === */
+    --shadow-card:       0 6px 18px rgba(244, 122, 122, 0.12);
+    --shadow-card-hover: 0 12px 28px rgba(244, 122, 122, 0.25);
+    --shadow-btn:        0 4px 14px rgba(220, 50, 50, 0.45);
+
+    /* === BORDERS === */
+    --clr-border:      rgb(245, 187, 187);
+    --clr-border-hero: rgba(171, 5, 27, 0.4);
+
+    /* === MISC === */
+    --radius-sm: 10px;
+    --radius-md: 15px;
+    --radius-full: 999px;
+    --transition: 0.25s ease;
+
+    /* === ALIASES (keeps existing variable names working) === */
+    --bg: var(--clr-bg);
+    --text-white: var(--clr-text-white);
+    --nav-bg: var(--clr-bg-nav);
+    --accent: var(--clr-primary);
+    --accent-contrast: var(--clr-primary-light);
+    --accent-border-rgba: var(--clr-border-hero);
     --bisque: bisque;
-    --beige: beige;
-    --danger: red;
-    --hero-blob: rgb(241, 37, 37);
-    --section-title: #5d5b5b;
-    --muted: rgb(134, 132, 132);
-    --card-bg: rgb(248, 209, 209);
-    --card-border: rgb(245, 187, 187);
-    --card-shadow: 0 6px 18px rgba(244, 122, 122, 0.12);
-    --card-hover-shadow: 0 12px 28px rgba(244, 122, 122, 0.18);
+    --beige: var(--clr-primary-light);
+    --danger: var(--clr-primary-dark);
+    --hero-blob: var(--clr-bg-hero);
+    --section-title: var(--clr-text-heading);
+    --muted: var(--clr-text-muted);
+    --card-bg: var(--clr-bg-card);
+    --card-border: var(--clr-border);
+    --card-shadow: var(--shadow-card);
+    --card-hover-shadow: var(--shadow-card-hover);
     --card-image-start: rgb(243, 215, 215);
     --card-image-end: #fff0f3;
-    --emoji-shadow: rgb(244, 80, 80);
-    --badge-hot: rgb(245, 122, 122);
-    --badge-new: rgb(243, 122, 122);
-    --badge-sale: rgb(244, 85, 85);
-    --category: rgb(253, 129, 129);
-    --desc: rgb(101, 101, 101);
-    --btn-cart-bg: rgb(255, 126, 126);
-    --btn-cart-border: rgb(239, 129, 147);
-    --btn-cart-hover: rgb(221, 50, 79);
-    --footer-bg: rgb(255, 171, 171);
-    --footer-logo: rgb(252, 134, 134);
-    --footer-link-hover: rgb(255, 152, 152);
+    --emoji-shadow: rgba(244, 80, 80, 0.9);
+    --badge-hot: var(--clr-badge-hot);
+    --badge-new: var(--clr-badge-new);
+    --badge-sale: var(--clr-badge-sale);
+    --category: var(--clr-primary);
+    --desc: var(--clr-text-muted);
+    --btn-cart-bg: var(--clr-primary);
+    --btn-cart-border: var(--clr-border);
+    --btn-cart-hover: var(--clr-primary-dark);
+    --footer-bg: var(--clr-bg-footer);
+    --footer-logo: var(--clr-primary-dark);
+    --footer-link-hover: var(--clr-primary-light);
 }
 * {
     margin: 0;
@@ -159,7 +198,7 @@ header {
 }
 
 .hero-subtitle {
-    font-size: small;
+    font-size: 15px;
     color: var(--beige);
     margin-bottom: 16px;
     max-width: 420px;
@@ -176,7 +215,7 @@ header {
 .btn {
     display: inline-block;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     border-radius: 24px;
     border: none;
@@ -226,9 +265,6 @@ header {
     background: radial-gradient(circle, var(--hero-blob) 0%, transparent 70%);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
     filter: blur(40px);
     z-index: 0;
 }
@@ -337,7 +373,7 @@ header {
 /* CARD BODY */
 
 .card-body {
-    padding: 6px 20px;
+    padding: 16px 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -376,6 +412,7 @@ header {
     justify-content: space-between;
     gap: 16px;
     margin-top: auto;
+    padding-bottom: 16px;
 }
 
 .product-price {
@@ -411,7 +448,7 @@ header {
 .footer {
     background-color: var(--footer-bg);
     color: var(--text-white);
-    padding: 6px 18px;
+    padding: 40px 18px;
     margin-top: 12px;
 }
 
@@ -471,7 +508,7 @@ header {
     }
 
     .hero-subtitle {
-        margin:32px 48px ;
+        margin:0 auto 24px ;
     }
 
     .hero-actions {
